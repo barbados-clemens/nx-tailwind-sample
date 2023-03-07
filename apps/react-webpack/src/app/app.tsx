@@ -1,16 +1,8 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import styles from './app.module.css';
 
-import NxWelcome from './nx-welcome';
-
 export function App() {
-  return (
-    <>
-      <NxWelcome title="react-webpack" />
-
-      <div />
-    </>
-  );
+  return <div className="bg-indigo-500 p-2 font-mono">Hello!</div>;
 }
 
 export default App;
