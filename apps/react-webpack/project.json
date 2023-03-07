@@ -6,7 +6,9 @@
   "targets": {
     "build": {
       "executor": "@nrwl/webpack:webpack",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "defaultConfiguration": "production",
       "options": {
         "compiler": "babel",
@@ -19,7 +21,9 @@
           "apps/react-webpack/src/favicon.ico",
           "apps/react-webpack/src/assets"
         ],
-        "styles": ["apps/react-webpack/src/styles.css"],
+        "styles": [
+          "apps/react-webpack/src/styles.css"
+        ],
         "scripts": [],
         "isolatedConfig": true,
         "webpackConfig": "apps/react-webpack/webpack.config.js",
@@ -67,9 +71,22 @@
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
-        "lintFilePatterns": ["apps/react-webpack/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": [
+          "apps/react-webpack/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "component-test": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/react-webpack/cypress.config.ts",
+        "testingType": "component",
+        "devServerTarget": "react-webpack:build",
+        "skipServe": true
       }
     }
   },
