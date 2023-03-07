@@ -2,14 +2,12 @@
   "name": "tailwind-test",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {
-  },
+  "scripts": {},
   "private": true,
-  "dependencies": {
-  },
   "devDependencies": {
-    "nx": "15.8.5",
+    "@nrwl/react": "15.8.5",
     "@nrwl/workspace": "15.8.5",
+    "nx": "15.8.5",
     "prettier": "^2.6.2"
   }
 }
